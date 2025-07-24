@@ -132,6 +132,7 @@ const AllProducts = lazy(() =>
   import("./component/content/products/AllProducts")
 );
 import { useExactPageTransition } from "./component/animation/pageTransition/Transition";
+import Particles from "./component/animation/LandingPageAnimation/homePageParticlesAnimation/Particles";
 const NotFound = lazy(() => import("./component/content/NotFoundPage"));
 
 const AlbumData = [
