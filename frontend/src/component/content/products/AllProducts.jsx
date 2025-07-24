@@ -207,56 +207,54 @@ const AllProducts = () => {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-          {getFilteredProducts().length === 0 ? (
-            <div className="w-full flex justify-center items-center min-h-[200px] text-xl sm:text-2xl md:text-3xl font-semibold text-black">
-              This product is currently under manufacturing.
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-              {getFilteredProducts()
-                .slice(0, visibleCount)
-                .map((item) => {
-                  const isInCart = cartItems.some(
-                    (cartItem) => cartItem.id === item.id
-                  );
-                  return (
-                    <div
-                      key={item.id}
-                      className="border bg-white/10 p-3 sm:p-4 md:p-6 rounded-lg flex flex-col items-center justify-between text-center hover:scale-[1.02] transition-all duration-300"
-                    >
-                      <img
-                        src={item.img}
-                        alt={item.heading}
-                        className="w-full h-48 sm:h-60 md:h-72 object-contain"
-                      />
-                      <div>
-                        <h4 className="text-lg sm:text-xl md:text-2xl mt-2 sm:mt-3 md:mt-4 font-semibold">
-                          {item.heading}
-                        </h4>
-                        <p className="text-sm sm:text-base md:text-lg text-gray-700">
-                          {item.price}
-                        </p>
-                        <button
-                          onClick={() => {
-                            if (!isInCart) addToCart(item);
-                          }}
-                          disabled={isInCart}
-                          className={`mt-2 px-3 sm:px-4 py-1 sm:py-2 md:px-4 md:py-2 rounded-full transition-all duration-300 ${
-                            isInCart
-                              ? "bg-transparent border border-black cursor-default"
-                              : "bg-black text-white hover:bg-gray-800"
-                          }`}
-                        >
-                          {isInCart ? "Added" : "Add to Cart"}
-                        </button>
-                      </div>
+        {getFilteredProducts().length === 0 ? (
+          <div className="w-full flex justify-center items-center min-h-[200px] text-xl sm:text-2xl md:text-3xl font-semibold text-black">
+            This product is currently under manufacturing.
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+            {getFilteredProducts()
+              .slice(0, visibleCount)
+              .map((item) => {
+                const isInCart = cartItems.some(
+                  (cartItem) => cartItem.id === item.id
+                );
+                return (
+                  <div
+                    key={item.id}
+                    className="border bg-white/10 p-3 sm:p-4 md:p-6 rounded-lg flex flex-col items-center justify-between text-center hover:scale-[1.02] transition-all duration-300"
+                  >
+                    <img
+                      src={item.img}
+                      alt={item.heading}
+                      className="w-full h-48 sm:h-60 md:h-72 object-contain"
+                    />
+                    <div>
+                      <h4 className="text-lg sm:text-xl md:text-2xl mt-2 sm:mt-3 md:mt-4 font-semibold">
+                        {item.heading}
+                      </h4>
+                      <p className="text-sm sm:text-base md:text-lg text-gray-700">
+                        {item.price}
+                      </p>
+                      <button
+                        onClick={() => {
+                          if (!isInCart) addToCart(item);
+                        }}
+                        disabled={isInCart}
+                        className={`mt-2 px-3 sm:px-4 py-1 sm:py-2 md:px-4 md:py-2 rounded-full transition-all duration-300 ${
+                          isInCart
+                            ? "bg-transparent border border-black cursor-default"
+                            : "bg-black text-white hover:bg-gray-800"
+                        }`}
+                      >
+                        {isInCart ? "Added" : "Add to Cart"}
+                      </button>
                     </div>
-                  );
-                })}
-            </div>
-          )}
-        </div>
+                  </div>
+                );
+              })}
+          </div>
+        )}
       </section>
 
       <FilterModal
