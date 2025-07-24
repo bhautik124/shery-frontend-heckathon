@@ -217,7 +217,7 @@ const App = () => {
           </div>
         )}
 
-        <div className="relative z-10">
+        <div className="relative z-10 font-neuebrucke">
           <Suspense
             fallback={
               <div className="text-white text-center mt-10">Loading...</div>
