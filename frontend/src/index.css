@@ -1,0 +1,98 @@
+/* src/index.css */
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+@import url("./styles/transition.css");
+
+@font-face {
+  font-family: "NeueBrucke";
+  src: url("/font/NeueBrucke-Regular.woff2") format("woff2"),
+    url("/font/NeueBrucke-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply overflow-auto font-sans;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.anime-text .word {
+  border-radius: 2rem;
+}
+
+.anime-text .word span.keyword::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 1rem);
+  height: calc(100% + 0.4rem);
+  background-color: #fff;
+  border-radius: 2rem;
+  z-index: -1;
+}
+
+.anime-text .word span.keyword.vibrant::before,
+.anime-text .word span.keyword.shape::before,
+.anime-text .word span.keyword.interactive::before {
+  background-color: #7a78ff;
+}
+
+.anime-text .word span.keyword.living::before,
+.anime-text .word span.keyword.expression::before,
+.anime-text .word span.keyword.storytelling::before {
+  background-color: #fe6d38;
+}
+
+.anime-text .word span.keyword.clarity::before,
+.anime-text .word span.keyword.intuitive::before,
+.anime-text .word span.keyword.vision::before {
+  background-color: #c6fe69;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+.custom-scrollbar1::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar1::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar1::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
