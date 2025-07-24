@@ -201,7 +201,7 @@ const App = () => {
 
   return (
     <>
-      <div className="relative w-full min-h-screen">
+      <div className="relative w-full min-h-screen bg-black">
         {showParticles && (
           <div className="fixed inset-0 z-0 pointer-events-none">
             <Particles

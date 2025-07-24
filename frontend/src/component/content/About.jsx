@@ -6,7 +6,7 @@ import Menu from "../Menu/contactMenu/Menu";
 
 const About = () => {
   return (
-    <div className="w-full min-h-screen text-white px-4 py-4 sm:py-6 md:py-8">
+    <div className="w-full min-h-screen text-white px-4 py-4 sm:py-6 md:py-24 pb-28">
       <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-12 lg:gap-24 max-w-7xl mx-auto h-full">
         <div className="w-full lg:w-1/2 h-auto">
           <img
