@@ -31,7 +31,7 @@ import axios from "axios";
 export const fetchHoodies = async () => {
   try {
     const res = await axios.get(
-      "https://mocki.io/v1/92d66dfb-bedc-48b8-93ec-968e53a5c60f"
+      "https://mocki.io/v1/4063d876-3e87-4f69-b4a5-2d31f017349a"
     );
     return res.data || [];
   } catch (error) {

@@ -31,7 +31,7 @@ import axios from "axios";
 export const fetchAlbums = async () => {
   try {
     const res = await axios.get(
-      "https://mocki.io/v1/1a2ecc67-f409-443c-8648-edfeace4919e"
+      "https://mocki.io/v1/36c0b9b7-6e83-499c-8351-f4f36fbe4c07"
     );
     return res.data || [];
   } catch (error) {

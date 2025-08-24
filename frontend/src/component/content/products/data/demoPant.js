@@ -26,7 +26,7 @@ import axios from "axios";
 export const fetchPants = async () => {
   try {
     const res = await axios.get(
-      "https://mocki.io/v1/b908cc11-594d-48d8-a457-6e74f5a7e096"
+      "https://mocki.io/v1/7707d3b7-a7a4-4819-ad53-679c3400dbbb"
     );
     return res.data || [];
   } catch (error) {
