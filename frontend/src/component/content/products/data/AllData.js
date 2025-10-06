@@ -155,7 +155,7 @@ import axios from "axios";
 export const fetchAllData = async () => {
   try {
     const res = await axios.get(
-      "https://mocki.io/v1/70307d40-b888-4ecd-bd6a-b7c5639e65e9"
+      "https://mocki.io/v1/66a38def-07c3-4607-b753-af939da6db11"
     );
     return res.data || [];
   } catch (error) {

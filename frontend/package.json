@@ -4,12 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "postbuild": "node -e \"require('fs').copyFileSync('dist/index.html', 'dist/200.html')\"",
-  "lint": "eslint .",
-  "preview": "vite preview",
-  "start": "vite preview --port $PORT"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "start": "vite preview --port $PORT"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

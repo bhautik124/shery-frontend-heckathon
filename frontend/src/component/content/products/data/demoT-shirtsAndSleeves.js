@@ -26,7 +26,7 @@ import axios from "axios";
 export const fetchTShirts = async () => {
   try {
     const res = await axios.get(
-      "https://mocki.io/v1/c7c56c6b-488c-4058-956a-234c591a7928"
+      "https://mocki.io/v1/ce0a05ad-745d-4a82-a888-4573ec51cdb2"
     );
     return res.data || [];
   } catch (error) {
